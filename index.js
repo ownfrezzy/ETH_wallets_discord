@@ -12,6 +12,7 @@ const client = new Client({
 dbConnect();
 
 client.on('ready', () => {
+  // eslint-disable-next-line no-console
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
@@ -123,7 +124,7 @@ client.on('messageCreate', async (msg) => {
         msg.reply('Message successfully sent, check your DM');
       })
       .catch(() => {
-        msg.reply('Pleace, open your DM to recieve information');
+        msg.reply('Please, open your DM to receive information');
       });
 
     break;
